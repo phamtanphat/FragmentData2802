@@ -23,15 +23,19 @@ public class MainActivity extends AppCompatActivity {
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                FragmentAndroid fragmentAndroid = new FragmentAndroid();
-                fragmentTransaction.add(R.id.linearFragment,fragmentAndroid);
-                Bundle bundle = new Bundle();
-                bundle.putString("chuoi","Hello");
-                fragmentAndroid.setArguments(bundle);
-                fragmentTransaction.commit();
+
             }
         });
 
+    }
+    //Fragment chưa tồn tại
+    private void mainTofragment(){
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentAndroid fragmentAndroid = new FragmentAndroid();
+        fragmentTransaction.add(R.id.linearFragment,fragmentAndroid);
+        Bundle bundle = new Bundle();
+        bundle.putString("chuoi","Hello");
+        fragmentAndroid.setArguments(bundle);
+        fragmentTransaction.commit();
     }
 }
