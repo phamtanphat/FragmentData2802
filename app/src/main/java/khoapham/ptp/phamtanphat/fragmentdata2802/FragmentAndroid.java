@@ -17,7 +17,6 @@ public class FragmentAndroid extends BaseFragment  {
     @Override
     public int setView() {
         return R.layout.fragment_android;
-
     }
 
     @Override
