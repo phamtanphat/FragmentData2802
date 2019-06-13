@@ -12,4 +12,9 @@ public class Fragmentios extends BaseFragment {
     public void getViewinlayout(View v) {
 
     }
+
+    @Override
+    public void activityfinishcreate() {
+
+    }
 }
