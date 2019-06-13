@@ -17,8 +17,10 @@ public abstract class BaseFragment extends Fragment{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(setView(),container,false);
         getViewinlayout(view);
+
         return view;
     }
     public abstract int setView();
     public abstract void getViewinlayout(View v);
+
 }

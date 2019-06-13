@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#919294">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:textColor="#700744"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:id="@+id/textviewTitleAndroid"
+        android:text="Fragment Android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:hint="Nhap cai gi do?"
+        android:layout_below="@id/textviewTitleAndroid"
+        android:id="@+id/edittextAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="Send"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/edittextAndroid"
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
