@@ -1,5 +1,6 @@
 package khoapham.ptp.phamtanphat.fragmentdata2802;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -26,7 +27,9 @@ public abstract class BaseFragment extends Fragment{
     }
 
     public abstract int setView();
-    public abstract void getViewinlayout(View v);
+    public void getViewinlayout(View v){
+
+    }
     public abstract void activityfinishcreate();
 
 }
