@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ListenData{
 
     Button btnMain;
     FragmentManager fragmentManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
         btnMain = findViewById(R.id.buttonMain);
 
+
         btnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
             }
         });
@@ -37,5 +41,10 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("chuoi","Hello");
         fragmentAndroid.setArguments(bundle);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void sendData(String s) {
+        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 }

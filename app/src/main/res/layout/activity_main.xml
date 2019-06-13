@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,30 +8,33 @@
 
     <TextView
         android:id="@+id/textviewMain"
-        android:textColor="#1a3e6c"
-        android:layout_centerHorizontal="true"
-        android:textSize="50sp"
-        android:text="Main Activity"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Button Main"
-        android:layout_below="@id/textviewMain"
+        android:text="Main Activity"
+        android:textColor="#1a3e6c"
+        android:textSize="50sp" />
+
+    <Button
         android:id="@+id/buttonMain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textviewMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Button Main" />
+
     <LinearLayout
-    android:orientation="vertical"
-    android:id="@+id/linearFragment"
-    android:layout_below="@id/buttonMain"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:id="@+id/linearFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonMain"
+        android:orientation="vertical">
+
         <fragment
-            android:name="khoapham.ptp.phamtanphat.fragmentdata2802.FragmentAndroid"
             android:id="@+id/fragmentAndroid"
+            android:name="khoapham.ptp.phamtanphat.fragmentdata2802.FragmentAndroid"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-</LinearLayout>
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </RelativeLayout>
