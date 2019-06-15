@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements ListenData{
+public class MainActivity extends AppCompatActivity {
 
     Button btnMain;
     FragmentManager fragmentManager;
@@ -43,8 +43,5 @@ public class MainActivity extends AppCompatActivity implements ListenData{
         fragmentTransaction.commit();
     }
 
-    @Override
-    public void sendData(String s) {
-        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
-    }
+
 }

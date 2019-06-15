@@ -6,14 +6,15 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class FragmentAndroid extends BaseFragment  {
+public class FragmentAndroid extends BaseFragment implements ListenData {
 
     TextView txtTitleAndroid;
     Button btnSend;
-    ListenData listenData;
+    EditText edt;
     @Override
     public int setView() {
         return R.layout.fragment_android;
@@ -23,15 +24,18 @@ public class FragmentAndroid extends BaseFragment  {
     public void activityfinishcreate() {
         txtTitleAndroid = getView().findViewById(R.id.textviewTitleAndroid);
         btnSend = getView().findViewById(R.id.buttonSend);
+        edt = getView().findViewById(R.id.edittextAndroid);
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listenData = (ListenData) getActivity();
-                listenData.sendData("hello");
+
             }
         });
     }
 
 
-
+    @Override
+    public void sendData(float value) {
+        edt.setText(value+ "");
+    }
 }
